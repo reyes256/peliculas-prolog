@@ -34,17 +34,50 @@
                 </div>
                 <div class="col-md-12">
                     <label for="director" class="form-label">Director</label>
-                    <input type="text" class="form-control form-control-sm" id="director" name="director">
+                    <select id="director" class="form-control form-control-sm" name="director">
+                        <option value="none">Elige un director</option>
+                        <option value="andrew_adamson">Andrew Adamson</option>
+                        <option value="andrew_stanton">Andrew Stanton</option>
+                        <option value="anthony_russo">Anthony Russo</option>
+                        <option value="brad_bird">Brad Bird</option>
+                        <option value="chris_buck">Chris Buck</option>
+                        <option value="christopher_nolan">Christopher Nolan</option>
+                        <option value="damien_chazelle">Damien Chazelle</option>
+                        <option value="david_fincher">David Fincher</option>
+                        <option value="francis_ford_coppola">Francis Ford Coppola</option>
+                        <option value="frank_darabont">Frank Darabont</option>
+                        <option value="james_cameron">James Cameron</option>
+                        <option value="john_lasseter">John Lasseter</option>
+                        <option value="john_mctiernan">John McTiernan</option>
+                        <option value="jon_favreau">Jon Favreau</option>
+                        <option value="joss_whedon">Joss Whedon</option>
+                        <option value="lee_unkrich">Lee Unkrich</option>
+                        <option value="martin_scorsese">Martin Scorsese</option>
+                        <option value="mel_gibson">Mel Gibson</option>
+                        <option value="michael_curtiz">Michael Curtiz</option>
+                        <option value="nick_cassavetes">Nick Cassavetes</option>
+                        <option value="quentin_tarantino">Quentin Tarantino</option>
+                        <option value="ridley_scott">Ridley Scott</option>
+                        <option value="robert_zemeckis">Robert Zemeckis</option>
+                        <option value="roger_allers">Roger Allers</option>
+                        <option value="ryan_coogler">Ryan Coogler</option>
+                        <option value="steven_spielberg">Steven Spielberg</option>
+                        <option value="the_wachowskis">The Wachowskis</option>
+                        <option value="todd_phillips">Todd Phillips</option>
+                        <option value="wes_anderson">Wes Anderson</option>
+                    </select>
                 </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Buscar</button>
                 </div>
             </form>
-        </div>
 
-        <h1>{{genre}}</h1>
-        <h1>{{year}}</h1>
-        <h1>{{director}}</h1>
+            <br>
+
+            <h1>{{genre}}</h1>
+            <h1>{{year}}</h1>
+            <h1>{{director}}</h1>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     </body>

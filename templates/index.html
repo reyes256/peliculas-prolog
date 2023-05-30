@@ -15,23 +15,40 @@
             <form action="{{ url_for('results') }}" method="post" class="row g-3">
                 <div class="col-md-12">
                     <label for="genre" class="form-label">Genero</label>
-                    <select id="genre" class="form-control form-control-sm">
-                        <option value="">Elige un genero</option>
-                        <option value="Action">Action</option>
-                        <option value="Comedy">Comedy</option>
-                        <option value="Drama">Drama</option>
+                    <select id="genre" class="form-control form-control-sm" name="genre">
+                        <option value="none">Elige un genero</option>
+                        <option value="accion">Acción</option>
+                        <option value="drama">Drama</option>
+                        <option value="ciencia_ficcion">Ciencia Ficción</option>
+                        <option value="terror">Terror</option>
+                        <option value="comedia">Comedia</option>
+                        <option value="animacion">Drama</option>
+                        <option value="guerra">Guerra</option>
+                        <option value="romance">Romance</option>
+                        <option value="thriller">Thriller</option>
                     </select>
                 </div>
                 <div class="col-md-12">
                     <label for="year" class="form-label">Año</label>
-                    <input type="text" class="form-control form-control-sm" id="year">
+                    <input type="number" class="form-control form-control-sm" id="year" name="year">
                 </div>
                 <div class="col-md-12">
                     <label for="director" class="form-label">Director</label>
-                    <input type="text" class="form-control form-control-sm" id="director">
+                    <select id="director" class="form-control form-control-sm" name="director">
+                        <option value="none">Elige un director</option>
+                        <option value="accion">Acción</option>
+                        <option value="drama">Drama</option>
+                        <option value="ciencia_ficcion">Ciencia Ficción</option>
+                        <option value="terror">Terror</option>
+                        <option value="comedia">Comedia</option>
+                        <option value="animacion">Drama</option>
+                        <option value="guerra">Guerra</option>
+                        <option value="romance">Romance</option>
+                        <option value="thriller">Thriller</option>
+                    </select>
                 </div>
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
                 </div>
             </form>
         </div>

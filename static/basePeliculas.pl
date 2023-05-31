@@ -59,15 +59,27 @@ pelicula_por_titulo(Pelicula, Titulo) :-
     atom_string(PeliculaAtom, Pelicula),
     sub_atom(PeliculaAtom, _, _, _, TituloAtom).
 
-% Regla para consultar películas por genero
-pelicula_genero(Pelicula,Genero):- pelicula(Pelicula,Genero, _,_).
+% Regla para obtener todas las películas de un género dado
+peliculas_por_genero(Genero, Peliculas) :-
+    findall(Nombre, pelicula(Nombre, Genero, _, _), Peliculas).
+% Regla para obtener todas las películas de un año dado
+peliculas_por_anio(Anio) :-
+    pelicula(Titulo, Genero, Anio, Director),
+    write('Título: '), write(Titulo), nl,
+    write('Género: '), write(Genero), nl,
+    write('Año: '), write(Anio), nl,
+    write('Director: '), write(Director), nl, nl,
+    fail.
+peliculas_por_anio(_).
 % Regla para consultar películas por director
-pelicula_director(Pelicula,Director):- pelicula(Pelicula,_, _,Director).
-% Regla para consultar películas por Año
-pelicula_year(Pelicula, Year):- pelicula(Pelicula,_,Year,_).
+peliculas_por_director(Director) :-
+    pelicula(Titulo, Genero, Anio, Director),
+    write('Título: '), write(Titulo), nl,
+    write('Género: '), write(Genero), nl,
+    write('Año: '), write(Anio), nl,
+    write('Director: '), write(Director), nl, nl,
+    fail.
+peliculas_por_director(_).
 % Regla para verificar existencia de una película
 existe_pelicula(Pelicula) :-
     pelicula(Pelicula, _, _, _).
-genero(Genero):- pelicula(_,Genero,_,_).
-year(Year):- year(_,_,Year,_).
-director(Director):- director(_,_,_,Director).
